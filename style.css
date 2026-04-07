@@ -10,6 +10,8 @@
     --border-color: #1a1a24;
     --font-main: 'Outfit', -apple-system, sans-serif;
     --font-heading: 'Playfair Display', serif;
+    --font-serif: 'Crimson Text', serif;
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 * {
@@ -85,36 +87,50 @@ body {
     width: 100%;
 }
 
-/* --- Artigos --- */
+/* --- Grid de Reviews na Home --- */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 50px;
+}
+
+@media (max-width: 500px) {
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 article {
-    margin-bottom: 80px;
+    margin-bottom: 0; /* Removido margin-bottom fixo em favor do gap do grid */
     background: var(--card-bg);
     border: 1px solid var(--glass-border);
     border-radius: 20px;
-    padding: 40px;
+    padding: 30px;
     backdrop-filter: blur(5px);
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 article:hover {
-    border-color: rgba(212, 175, 55, 0.2);
+    transform: translateY(-10px);
+    border-color: rgba(212, 175, 55, 0.4);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
 
 article h2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     color: var(--heading-color);
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     font-family: var(--font-heading);
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     letter-spacing: -0.5px;
+    line-height: 1.3;
 }
 
 .review-conteudo {
     display: grid;
-    grid-template-columns: 250px 1fr;
-    gap: 60px;
+    grid-template-columns: 100px 1fr;
+    gap: 25px;
     align-items: flex-start;
 }
 
@@ -130,9 +146,9 @@ article h2 {
 }
 
 .poster-filme {
-    max-width: 220px;
-    border-radius: 12px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -291,4 +307,164 @@ article:nth-child(2) { animation-delay: 0.4s; }
         align-items: flex-start;
         gap: 10px;
     }
+}
+
+/* --- REVIEW PAGES STYLES --- */
+
+.critica-body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+.critica-hero {
+    position: relative;
+    height: 50vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    margin-left: -5vw;
+    margin-right: -5vw;
+    width: 110vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.critica-hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to bottom, rgba(11, 11, 15, 0.4), rgba(11, 11, 15, 1));
+}
+
+.critica-hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 1rem;
+    max-width: 900px;
+}
+
+.critica-hero-content h1 {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    text-shadow: 0 5px 30px rgba(0,0,0,1);
+}
+
+.critica-meta {
+    font-size: 1.2rem;
+    color: #a0a0ab;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.critica-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px 100px;
+}
+
+.critica-section {
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    color: var(--text-color);
+    margin-bottom: 5rem;
+}
+
+.critica-section h2 {
+    font-family: var(--font-heading);
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 3rem;
+    opacity: 0.8;
+    text-align: center;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+.lingua-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+    margin: 6rem 0;
+    position: relative;
+    opacity: 0.3;
+}
+
+.lingua-divider::after {
+    content: '◈';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--bg-color);
+    padding: 0 2rem;
+    color: var(--accent-color);
+}
+
+.btn-voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--accent-color);
+    text-decoration: none;
+    margin-bottom: 40px;
+    transition: var(--transition);
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.btn-voltar:hover {
+    transform: translateX(-8px);
+    color: white;
+}
+
+.critica-section i, .critica-section blockquote {
+    display: block;
+    border-left: 1px solid var(--accent-color);
+    padding-left: 2rem;
+    margin: 3rem 0;
+    font-style: italic;
+    color: #a0a0ab;
+}
+
+/* Star coloring in internal pages */
+.critica-rating .estrelas {
+    font-size: 1.8rem;
+    letter-spacing: 5px;
+}
+
+/* Featured summary in the home page cards */
+.review-resumo {
+    margin-top: 20px;
+    color: #a0a0ab;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.btn-ler-mais {
+    display: inline-block;
+    margin-top: 25px;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+.btn-ler-mais:hover {
+    letter-spacing: 2px;
 }
