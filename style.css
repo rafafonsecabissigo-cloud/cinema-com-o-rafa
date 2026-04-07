@@ -1,0 +1,294 @@
+:root {
+    --bg-color: #0b0b0f;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --text-color: #e0e0e6;
+    --heading-color: #ffffff;
+    --accent-color: #d4af37; /* Metallic Gold */
+    --accent-glow: rgba(212, 175, 55, 0.3);
+    --tag-bg: rgba(212, 175, 55, 0.1);
+    --border-color: #1a1a24;
+    --font-main: 'Outfit', -apple-system, sans-serif;
+    --font-heading: 'Playfair Display', serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: 
+        radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.03) 0%, transparent 40%);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    line-height: 1.7;
+    margin: 0 auto; /* Centraliza o corpo */
+    padding: 20px 5%;
+    max-width: 1200px; /* Limita a largura para não espalhar demais */
+    min-height: 100vh;
+}
+
+/* --- Cabeçalho --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    margin-bottom: 60px;
+    border-bottom: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar h1 { 
+    color: var(--heading-color); 
+    margin: 0; 
+    font-size: 1.8rem;
+    font-family: var(--font-heading);
+    letter-spacing: -0.5px;
+}
+
+.navbar nav a { 
+    color: #a0a0ab; 
+    text-decoration: none; 
+    margin-left: 30px; 
+    font-weight: 500; 
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+}
+
+.navbar nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: var(--accent-color);
+}
+
+.navbar nav a:hover::after {
+    width: 100%;
+}
+
+/* --- Artigos --- */
+article {
+    margin-bottom: 80px;
+    background: var(--card-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 40px;
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+article:hover {
+    border-color: rgba(212, 175, 55, 0.2);
+}
+
+article h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--heading-color);
+    margin-bottom: 30px;
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    letter-spacing: -0.5px;
+}
+
+.review-conteudo {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.estrelas { 
+    color: var(--accent-color); 
+    font-size: 1.4rem;
+    filter: drop-shadow(0 0 5px var(--accent-glow));
+}
+
+/* --- Imagem do Filme --- */
+.poster-container {
+    perspective: 1000px;
+}
+
+.poster-filme {
+    max-width: 220px;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.poster-filme:hover {
+    transform: translateY(-10px) rotateY(5deg);
+    box-shadow: 0 30px 60px rgba(212, 175, 55, 0.15);
+}
+
+/* --- Layout Bilíngue --- */
+.idioma-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.tag-idioma {
+    background-color: var(--tag-bg);
+    color: var(--accent-color);
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 20px;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+strong { 
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* --- Rodapé --- */
+footer {
+    padding: 80px 0;
+    margin-top: 100px;
+    border-top: 1px solid var(--glass-border);
+}
+
+.sobre-mim-rodape {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    background: linear-gradient(145deg, rgba(255,255,255,0.02) 0%, rgba(212, 175, 55, 0.02) 100%);
+    padding: 60px;
+    border-radius: 30px;
+    border: 1px solid var(--glass-border);
+}
+
+.foto-perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    filter: grayscale(20%);
+    transition: all 0.4s ease;
+}
+
+.foto-perfil:hover {
+    filter: grayscale(0%);
+    transform: scale(1.02);
+}
+
+.texto-sobre h3 {
+    color: var(--heading-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+}
+
+.contatos-grid {
+    display: flex;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.link-contato, .link-letterboxd {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 12px 24px;
+    border: 1px solid var(--glass-border);
+    border-radius: 100px;
+    transition: all 0.3s ease;
+    background: rgba(255,255,255,0.02);
+}
+
+.link-contato:hover, .link-letterboxd:hover {
+    background: var(--accent-color);
+    color: var(--bg-color);
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px var(--tag-bg);
+}
+
+/* --- Animações --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+article {
+    animation: fadeInUp 0.8s ease backwards;
+}
+
+article:nth-child(1) { animation-delay: 0.2s; }
+article:nth-child(2) { animation-delay: 0.4s; }
+
+/* --- Responsividade (Celular) --- */
+@media (max-width: 900px) {
+    .review-conteudo {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .idioma-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .sobre-mim-rodape {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .foto-perfil {
+        width: 150px;
+        height: 150px;
+    }
+
+    .contatos-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    body {
+        padding: 10px 20px;
+    }
+
+    article h2 {
+        font-size: 1.6rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
