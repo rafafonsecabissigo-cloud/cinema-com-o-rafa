@@ -493,3 +493,79 @@ article:nth-child(2) { animation-delay: 0.4s; }
 .btn-ler-mais:hover {
     letter-spacing: 2px;
 }
+
+/* --- LIST TABLES (RANKINGS) --- */
+
+.list-table-container {
+    margin-top: 40px;
+    background: var(--card-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 30px;
+    overflow-x: auto;
+}
+
+.list-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-family: var(--font-main);
+}
+
+.list-table th {
+    padding: 15px;
+    border-bottom: 2px solid var(--glass-border);
+    color: var(--accent-color);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.list-table td {
+    padding: 20px 15px;
+    border-bottom: 1px solid var(--glass-border);
+    vertical-align: middle;
+}
+
+.list-table tr:last-child td {
+    border-bottom: none;
+}
+
+.list-table .rank {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    width: 60px;
+}
+
+.list-table .title {
+    font-weight: 600;
+    color: var(--heading-color);
+}
+
+.list-table .year {
+    color: #a0a0ab;
+    font-size: 0.9rem;
+}
+
+.list-table .movie-link {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.list-table tr:hover .movie-link {
+    color: var(--accent-color);
+}
+
+.list-table tr:hover {
+    background: rgba(212, 175, 55, 0.03);
+}
+
+@media (max-width: 600px) {
+    .list-table th:nth-child(3),
+    .list-table td:nth-child(3) {
+        display: none; /* Esconde ano em telas ultra pequenas se necessário */
+    }
+}

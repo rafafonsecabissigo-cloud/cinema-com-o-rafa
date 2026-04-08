@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas - Cinema com o Rafa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .list-section {
+            margin-bottom: 80px;
+        }
+        .list-section h2 {
+            font-family: var(--font-heading);
+            color: var(--accent-color);
+            font-size: 2rem;
+            margin-bottom: 40px;
+            text-align: center;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .list-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .list-card {
+            background: var(--card-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 30px;
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+        .list-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-color);
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.1);
+        }
+        .list-card h3 {
+            color: var(--heading-color);
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+        .list-card p {
+            color: #a0a0ab;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            flex-grow: 1;
+        }
+        .list-card span {
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .list-card span::after {
+            content: '→';
+            transition: transform 0.3s ease;
+        }
+        .list-card:hover span::after {
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <h1>Cinema com o Rafa 🎥</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="index.html#criticas">Críticas</a>
+            <a href="listas.html">Listas</a>
+            <a href="index.html#contato">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seção Temporada 2026 -->
+        <section class="list-section">
+            <h2>Temporada 2026 🎬</h2>
+            <div class="list-grid">
+                <a href="listas/the-movies-ive-watched-in-2026.html" class="list-card">
+                    <div>
+                        <h3>Filmes Assistidos em 2026</h3>
+                        <p>O acompanhamento diário das minhas descobertas e revisitas cinematográficas deste ano.</p>
+                    </div>
+                    <span>Explorar Lista</span>
+                </a>
+                <a href="listas/cinematic-experiences-of-2026.html" class="list-card">
+                    <div>
+                        <h3>Experiências no Cinema 2026</h3>
+                        <p>Os filmes que tive o privilégio de vivenciar na tela grande (cinema de rua e shoppings).</p>
+                    </div>
+                    <span>Explorar Lista</span>
+                </a>
+                <a href="listas/the-movies-i-need-to-watch-in-2026.html" class="list-card">
+                    <div>
+                        <h3>C watchlist 2026</h3>
+                        <p>Os grandes desafios e metas que separei para assistir ao longo deste ano reflexivo.</p>
+                    </div>
+                    <span>Explorar Lista</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Seção Rankings -->
+        <section class="list-section">
+            <h2>Rankings de Diretores 🏆</h2>
+            <div class="list-grid">
+                <a href="listas/buster-keaton-ranked.html" class="list-card">
+                    <div>
+                        <h3>Buster Keaton Rankings</h3>
+                        <p>O gênio da comédia silenciosa rankeado, do melhor ao... também ótimo, pois ele é incrível.</p>
+                    </div>
+                    <span>Explorar Lista</span>
+                </a>
+                <a href="listas/kleber-mendonca-filho-rankeado.html" class="list-card">
+                    <div>
+                        <h3>Kleber Mendonça Filho</h3>
+                        <p>Ranking pessoal das obras de um dos nomes mais importantes do cinema brasileiro atual.</p>
+                    </div>
+                    <span>Explorar Lista</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Seção Pessoal -->
+        <section class="list-section">
+            <h2>Impacto Pessoal ✨</h2>
+            <div class="list-grid">
+                <a href="listas/films-that-changed-the-perception-of-life.html" class="list-card">
+                    <div>
+                        <h3>Mudaram Minha Vida</h3>
+                        <p>Esses são os filmes que moldaram quem eu sou e me ajudaram em momentos difíceis.</p>
+                    </div>
+                    <span>Explorar Lista</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contato">
+        <div class="sobre-mim-rodape">
+            <img src="https://i.postimg.cc/8sQPwTcv/Whats-App-Image-2026-03-30-at-11-03-36-(1).jpg"
+                alt="Foto de Rafael Bissigo" class="foto-perfil">
+
+            <div class="texto-sobre">
+                <h3>Sobre o Autor</h3>
+                <p>Sou Rafael Bissigo, crítico e apaixonado pelo cinema, baseado em João Pessoa (PB). Aqui, compartilho análises, críticas e reflexões sobre o cinema clássico e contemporâneo.</p>
+                <div class="contatos-grid">
+                    <a href="mailto:cinemacomorafa@gmail.com" class="link-contato">E-mail ✉️</a>
+                    <a href="https://letterboxd.com/bissigorafael/" target="_blank" class="link-letterboxd">Meu
+                        Letterboxd ↗</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
