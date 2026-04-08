@@ -563,6 +563,30 @@ article:nth-child(2) { animation-delay: 0.4s; }
     background: rgba(212, 175, 55, 0.03);
 }
 
+/* --- MINI POSTERS IN TABLES --- */
+
+.mini-poster-td {
+    width: 70px; /* Largura controlada */
+    padding-right: 0 !important;
+}
+
+.mini-poster {
+    width: 60px;
+    height: 85px; /* Proporção 2:3 aproximada */
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid var(--glass-border);
+    background: #111; /* Cor de fundo caso a imagem falhe */
+    display: block;
+    transition: var(--transition);
+}
+
+.list-table tr:hover .mini-poster {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
+    border-color: var(--accent-color);
+}
+
 @media (max-width: 600px) {
     .list-table th:nth-child(3),
     .list-table td:nth-child(3) {
