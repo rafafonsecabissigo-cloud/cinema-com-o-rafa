@@ -28,9 +28,9 @@ body {
     color: var(--text-color);
     font-family: var(--font-main);
     line-height: 1.7;
-    margin: 0 auto; /* Centraliza o corpo */
+    margin: 0 auto;
     padding: 20px 5%;
-    max-width: 1200px; /* Limita a largura para não espalhar demais */
+    max-width: 1200px;
     min-height: 100vh;
 }
 
@@ -101,7 +101,7 @@ body {
 }
 
 article {
-    margin-bottom: 0; /* Removido margin-bottom fixo em favor do gap do grid */
+    margin-bottom: 0;
     background: var(--card-bg);
     border: 1px solid var(--glass-border);
     border-radius: 20px;
@@ -296,7 +296,6 @@ article:nth-child(2) { animation-delay: 0.4s; }
         text-align: center;
     }
 
-    /* Reduzindo o padding interno dos cards */
     article {
         padding: 20px;
     }
@@ -566,17 +565,17 @@ article:nth-child(2) { animation-delay: 0.4s; }
 /* --- MINI POSTERS IN TABLES --- */
 
 .mini-poster-td {
-    width: 70px; /* Largura controlada */
+    width: 70px;
     padding-right: 0 !important;
 }
 
 .mini-poster {
     width: 60px;
-    height: 85px; /* Proporção 2:3 aproximada */
+    height: 85px;
     object-fit: cover;
     border-radius: 6px;
     border: 1px solid var(--glass-border);
-    background: #111; /* Cor de fundo caso a imagem falhe */
+    background: #111;
     display: block;
     transition: var(--transition);
 }
@@ -587,9 +586,35 @@ article:nth-child(2) { animation-delay: 0.4s; }
     border-color: var(--accent-color);
 }
 
+/* --- ANO MOBILE --- */
+
+.year-mobile {
+    display: none;
+}
+
 @media (max-width: 600px) {
     .list-table th:nth-child(4),
     .list-table td:nth-child(4) {
-        display: none; /* Esconde ano em telas ultra pequenas se necessário */
+        display: none;
+    }
+
+    .mini-poster {
+        width: 45px;
+        height: 65px;
+    }
+
+    .mini-poster-td {
+        width: 50px;
+    }
+
+    .list-table .title {
+        font-size: 0.85rem;
+    }
+
+    .year-mobile {
+        display: block;
+        color: #a0a0ab;
+        font-size: 0.8rem;
+        margin-top: 4px;
     }
 }
