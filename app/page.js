@@ -21,14 +21,52 @@ export default function HomePage() {
       <Navbar />
       
       <main>
-        {/* --- HERO SECTION (Usando sua classe .critica-hero) --- */}
-        <section className="critica-hero" style={{ marginBottom: "5rem" }}>
-          <Image
-            src={featured ? normalizeImagePath(featured.posterImage) : "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba"}
-            alt="Cinema com o Rafa Hero"
-            fill
-            className="hero-bg-image"
-            priority
+        {/* --- HERO SECTION LIMPO E ELEGANTE --- */}
+        <section style={{ textAlign: "center", padding: "8rem 1rem 5rem", display: "flex", flexDirection: "column", alignItems: "center" }}>
+          <p style={{ 
+            color: "var(--accent-color)", 
+            textTransform: "uppercase", 
+            letterSpacing: "4px", 
+            fontSize: "0.85rem", 
+            fontWeight: "600", 
+            marginBottom: "1.5rem" 
+          }}>
+            Crítica Cinematográfica · João Pessoa, PB
+          </p>
+          <h1 style={{ 
+            fontFamily: "var(--font-heading), serif", 
+            fontSize: "clamp(3.5rem, 8vw, 5.5rem)", 
+            color: "var(--heading-color)", 
+            lineHeight: "1.1", 
+            marginBottom: "1.5rem",
+            textShadow: "0 4px 20px rgba(0,0,0,0.5)"
+          }}>
+            Cinema com o Rafa
+          </h1>
+          <p style={{ 
+            color: "#a0a0ab", 
+            fontSize: "1.2rem", 
+            lineHeight: "1.8", 
+            maxWidth: "700px",
+            marginBottom: "3rem" 
+          }}>
+            Um espaço editorial de crítica cinematográfica com voz autoral, foco em curadoria e cobertura para festivais. Publicações em português e inglês.
+          </p>
+          <blockquote style={{ 
+            fontStyle: "italic", 
+            color: "#888", 
+            borderLeft: "2px solid var(--accent-color)", 
+            paddingLeft: "1.5rem", 
+            textAlign: "left",
+            maxWidth: "600px",
+            background: "rgba(255,255,255,0.02)",
+            padding: "1.5rem",
+            borderRadius: "0 12px 12px 0"
+          }}>
+            <p style={{ marginBottom: "0.5rem" }}>"A verdadeira viagem de descobrimento não consiste em procurar novas paisagens, mas em ter novos olhos."</p>
+            <footer style={{ fontWeight: "600", color: "var(--accent-color)", fontSize: "0.9rem" }}>— Marcel Proust</footer>
+          </blockquote>
+        </section>
           />
           <div className="critica-hero-content">
             <p className="critica-meta">CRÍTICA CINEMATOGRÁFICA · JOÃO PESSOA, PB</p>
