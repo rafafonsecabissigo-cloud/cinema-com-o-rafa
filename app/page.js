@@ -1,102 +1,130 @@
 import Image from "next/image";
- import Navbar from '../components/Navbar'
-   import Footer from '../components/Footer'
+import Link from "next/link";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import { getReviews } from "../lib/data";
 
 export const metadata = {
-  title: "Sobre | Cinema com o Rafa",
+  title: "Cinema com o Rafa | Crítica Cinematográfica",
   description:
-    "Rafael Bissigo é crítico de cinema baseado em João Pessoa (PB). Conheça o autor do Cinema com o Rafa."
+    "Críticas, listas e cobertura de festivais por Rafael Bissigo. Um olhar editorial sobre o cinema em português e inglês.",
 };
 
-export default function SobrePage() {
+export default function HomePage() {
+  const reviews = getReviews();
+  const featured = reviews[0];
+  const recentes = reviews.slice(1, 4);
+
   return (
     <>
       <Navbar />
-      <main className="sobre-page">
-        <blockquote className="sobre-epigraph" cite="https://en.wikipedia.org/wiki/Marcel_Proust">
-          <p>
-            A verdadeira viagem de descobrimento não consiste em procurar novas paisagens, mas em ter
-            novos olhos.
-          </p>
-          <footer>— Marcel Proust</footer>
-        </blockquote>
-
-        <div className="sobre-hero">
-          <Image
-            src="https://i.postimg.cc/8sQPwTcv/Whats-App-Image-2026-03-30-at-11-03-36-(1).jpg"
-            alt="Rafael Bissigo"
-            className="sobre-foto"
-            width={180}
-            height={180}
-            priority
-          />
-          <div className="sobre-intro">
-            <h1>Rafael Bissigo</h1>
-            <p className="sobre-cargo">Crítico de Cinema · João Pessoa, PB</p>
-            <p>
-              Escrevo sobre cinema porque acredito que filmes são uma das formas mais honestas de
-              entender o mundo e as pessoas. No Cinema com o Rafa, você encontra críticas, listas e
-              reflexões sobre a sétima arte — em português e inglês.
+      <main>
+        <section className="home-hero">
+          <div className="home-hero-main">
+            <p className="home-kicker">Crítica de cinema · João Pessoa, PB</p>
+            <h1 className="home-title">Cinema com o Rafa</h1>
+            <p className="home-lead">
+              Um espaço editorial de crítica cinematográfica com voz autoral,
+              foco em curadoria e cobertura para festivais. Publicações em
+              português e inglês.
             </p>
+            <blockquote className="home-epigraph">
+              <p>
+                A verdadeira viagem de descobrimento não consiste em procurar
+                novas paisagens, mas em ter novos olhos.
+              </p>
+              <footer>— Marcel Proust</footer>
+            </blockquote>
+            <div className="home-hero-actions">
+              <Link href="/criticas" className="btn-featured-primary">Ler Críticas</Link>
+              <Link href="/listas" className="btn-featured-secondary">Explorar Listas</Link>
+            </div>
           </div>
-        </div>
 
-        <div className="sobre-secao">
-          <h2>Sobre o projeto</h2>
-          <p>
-            O Cinema com o Rafa nasceu da vontade de criar um espaço de crítica cinematográfica
-            séria, acessível e com voz própria. Aqui não há algoritmo ditando o que assistir —
-            apenas olhares atentos sobre filmes que merecem ser discutidos.
-          </p>
-          <p>
-            As críticas são publicadas em português e inglês, com o objetivo de alcançar públicos e
-            festivais além das fronteiras do Brasil.
-          </p>
-        </div>
+          <aside className="home-hero-aside">
+            <p className="home-aside-label">Editor</p>
+            <div className="home-editor-card">
+              <Image
+                src="https://i.postimg.cc/8sQPwTcv/Whats-App-Image-2026-03-30-at-11-03-36-(1).jpg"
+                alt="Rafael Bissigo"
+                className="home-editor-photo"
+                width={56}
+                height={56}
+                priority
+              />
+              <div>
+                <p className="home-editor-name">Rafael Bissigo</p>
+                <p className="home-editor-role">Crítico de cinema independente</p>
+              </div>
+            </div>
+            {featured && (
+              <>
+                <p className="home-aside-label" style={{ marginTop: "20px" }}>Crítica em destaque</p>
+                <Link href={`/criticas/${featured.slug}`} className="home-featured-card">
+                  <Image
+                    src={`/images/${featured.posterImage.replace("images/", "")}`}
+                    alt={featured.title}
+                    className="home-featured-poster"
+                    width={52}
+                    height={78}
+                  />
+                  <div>
+                    <p className="home-featured-title">{featured.title}</p>
+                    <p className="home-featured-meta">{featured.year} · {featured.director}</p>
+                    <p className="home-featured-stars">{featured.rating}</p>
+                  </div>
+                </Link>
+              </>
+            )}
+          </aside>
+        </section>
 
-        <div className="sobre-secao">
-          <h2>Cobertura e credenciais</h2>
-          <p>
-            Tenho interesse em cobrir festivais, cabines de imprensa e lançamentos. Para solicitações
-            de credencial ou envio de material de imprensa, entre em contato pelo e-mail abaixo.
-          </p>
-        </div>
-
-        <div className="sobre-secao">
-          <h2>Contato</h2>
-          <p>
-            Para parcerias, credenciais de imprensa, sugestões ou apenas para falar sobre cinema:
-          </p>
-          <div className="sobre-contatos">
-            <a href="mailto:cinemacomorafa@gmail.com" className="link-contato">
-              cinemacomorafa@gmail.com
-            </a>
-            <a
-              href="https://letterboxd.com/bissigorafael/"
-              target="_blank"
-              rel="noreferrer"
-              className="link-letterboxd"
-            >
-              Letterboxd ↗
-            </a>
-            <a
-              href="https://instagram.com/cinemacomorafa"
-              target="_blank"
-              rel="noreferrer"
-              className="link-contato"
-            >
-              Instagram ↗
-            </a>
-            <a
-              href="https://x.com/cinemacomorafa"
-              target="_blank"
-              rel="noreferrer"
-              className="link-contato"
-            >
-              X / Twitter ↗
-            </a>
+        <section className="home-recentes">
+          <div className="home-recentes-header">
+            <h2 className="home-section-label">Últimas críticas</h2>
+            <Link href="/criticas" className="home-ver-todas">Ver todas →</Link>
           </div>
-        </div>
+          <div className="home-reviews-grid">
+            {recentes.map((review) => (
+              <Link key={review.slug} href={`/criticas/${review.slug}`} className="home-review-card">
+                <Image
+                  src={`/images/${review.posterImage.replace("images/", "")}`}
+                  alt={review.title}
+                  className="home-review-poster"
+                  width={300}
+                  height={120}
+                />
+                <p className="home-review-title">{review.title}</p>
+                <p className="home-review-meta">{review.year} · {review.director}</p>
+                <p className="home-review-stars">{review.rating}</p>
+                <p className="home-review-summary">{review.summary}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <section className="home-nav-grid">
+          <Link href="/criticas" className="home-nav-card">
+            <h3>Críticas</h3>
+            <p>Análises autorais de clássicos e contemporâneos, com filtros por nota, diretor e período.</p>
+            <span className="home-nav-arrow">Explorar →</span>
+          </Link>
+          <Link href="/listas" className="home-nav-card">
+            <h3>Listas</h3>
+            <p>Curadorias temáticas e rankings para descoberta de filmes, autores e recortes de temporada.</p>
+            <span className="home-nav-arrow">Explorar →</span>
+          </Link>
+          <Link href="/sobre" className="home-nav-card">
+            <h3>Sobre</h3>
+            <p>Perfil editorial, posicionamento crítico e cobertura para imprensa e festivais.</p>
+            <span className="home-nav-arrow">Explorar →</span>
+          </Link>
+        </section>
+
+        <section className="home-cta">
+          <p>Para credenciais e contato profissional, use o canal oficial de imprensa.</p>
+          <a href="mailto:cinemacomorafa@gmail.com" className="home-cta-email">cinemacomorafa@gmail.com</a>
+        </section>
       </main>
       <Footer />
     </>
