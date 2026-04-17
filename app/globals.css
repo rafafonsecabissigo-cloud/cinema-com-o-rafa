@@ -892,3 +892,142 @@ footer {
     margin-top: 4px;
   }
 }
+/* ── Cole isso no final do globals.css ── */
+
+/* Navbar: divisor e ícones sociais */
+.nav-divider {
+  display: inline-block;
+  width: 1px;
+  height: 14px;
+  background: var(--glass-border);
+  margin-left: 20px;
+  vertical-align: middle;
+}
+
+.nav-social {
+  color: #a0a0ab;
+  margin-left: 14px;
+  display: inline-flex;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.nav-social:hover {
+  color: var(--accent-color);
+}
+
+/* Footer: e-mail em destaque */
+.footer-email-destaque {
+  margin: 20px 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-email-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #a0a0ab;
+}
+
+.footer-email-link {
+  color: var(--accent-color);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+  word-break: break-all;
+}
+
+.footer-email-link:hover {
+  opacity: 0.8;
+}
+
+/* Footer: copyright */
+.footer-copy {
+  text-align: center;
+  color: #a0a0ab;
+  font-size: 0.8rem;
+  margin-top: 40px;
+  letter-spacing: 1px;
+}
+
+/* Página Sobre */
+.sobre-page {
+  max-width: 780px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+
+.sobre-hero {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 60px;
+}
+
+.sobre-foto {
+  width: 180px;
+  height: 180px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  flex-shrink: 0;
+}
+
+.sobre-intro h1 {
+  font-family: var(--font-heading), serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--heading-color);
+  margin-bottom: 8px;
+}
+
+.sobre-intro .sobre-cargo {
+  color: var(--accent-color);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.sobre-intro p {
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+.sobre-secao {
+  margin-bottom: 48px;
+}
+
+.sobre-secao h2 {
+  font-family: var(--font-heading), serif;
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.sobre-secao p {
+  color: var(--text-color);
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.sobre-contatos {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .sobre-hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
