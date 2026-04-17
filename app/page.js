@@ -1,58 +1,98 @@
 import Image from "next/image";
-import Link from "next/link";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import ReviewCard from "../components/ReviewCard";
-import { getReviews, normalizeImagePath } from "../lib/data";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
-export default function HomePage() {
-  const reviews = getReviews();
-  const [featuredReview, ...otherReviews] = reviews;
+export const metadata = {
+  title: "Sobre | Cinema com o Rafa",
+  description:
+    "Rafael Bissigo é crítico de cinema baseado em João Pessoa (PB). Conheça o autor do Cinema com o Rafa."
+};
 
+export default function SobrePage() {
   return (
     <>
       <Navbar />
-      <main id="inicio">
-        {featuredReview ? (
-          <section className="featured-review">
-            <div className="featured-media">
-              <Image
-                src={normalizeImagePath(featuredReview.posterImage)}
-                alt={featuredReview.title}
-                width={340}
-                height={510}
-                className="featured-poster"
-                priority
-              />
-            </div>
-            <div className="featured-content">
-              <p className="featured-kicker">Crítica em Destaque</p>
-              <h2>
-                {featuredReview.title} ({featuredReview.year})
-              </h2>
-              <p className="featured-meta">Dirigido por {featuredReview.director}</p>
-              <p className="featured-rating">{featuredReview.rating}</p>
-              <p className="featured-summary">{featuredReview.summary}</p>
-              <div className="featured-actions">
-                <Link href={`/criticas/${featuredReview.slug}`} className="btn-featured-primary">
-                  Ler crítica completa
-                </Link>
-                <Link href="/criticas" className="btn-featured-secondary">
-                  Ver todas as críticas
-                </Link>
-              </div>
-            </div>
-          </section>
-        ) : null}
-
-        <div className="section-title-wrap">
-          <h2 className="page-title">Últimas Críticas</h2>
+      <main className="sobre-page">
+        <div className="sobre-hero">
+          <Image
+            src="https://i.postimg.cc/8sQPwTcv/Whats-App-Image-2026-03-30-at-11-03-36-(1).jpg"
+            alt="Rafael Bissigo"
+            className="sobre-foto"
+            width={180}
+            height={180}
+            priority
+          />
+          <div className="sobre-intro">
+            <h1>Rafael Bissigo</h1>
+            <p className="sobre-cargo">Crítico de Cinema · João Pessoa, PB</p>
+            <p>
+              Escrevo sobre cinema porque acredito que filmes são uma das formas mais
+              honestas de entender o mundo e as pessoas. No Cinema com o Rafa, você
+              encontra críticas, listas e reflexões sobre a sétima arte — em português
+              e inglês.
+            </p>
+          </div>
         </div>
-        <section id="criticas" className="reviews-grid">
-          {otherReviews.map((review) => (
-            <ReviewCard key={review.slug} review={review} />
-          ))}
-        </section>
+
+        <div className="sobre-secao">
+          <h2>Sobre o projeto</h2>
+          <p>
+            O Cinema com o Rafa nasceu da vontade de criar um espaço de crítica cinematográfica
+            séria, acessível e com voz própria. Aqui não há algoritmo ditando o que assistir —
+            apenas olhares atentos sobre filmes que merecem ser discutidos.
+          </p>
+          <p>
+            As críticas são publicadas em português e inglês, com o objetivo de alcançar
+            públicos e festivais além das fronteiras do Brasil.
+          </p>
+        </div>
+
+        <div className="sobre-secao">
+          <h2>Cobertura e credenciais</h2>
+          <p>
+            Tenho interesse em cobrir festivais, cabines de imprensa e lançamentos.
+            Para solicitações de credencial ou envio de material de imprensa, entre
+            em contato pelo e-mail abaixo.
+          </p>
+          {/* Adicione aqui festivais/eventos já cobertos conforme forem acontecendo */}
+        </div>
+
+        <div className="sobre-secao">
+          <h2>Contato</h2>
+          <p>
+            Para parcerias, credenciais de imprensa, sugestões ou apenas para falar
+            sobre cinema:
+          </p>
+          <div className="sobre-contatos">
+            <a href="mailto:cinemacomorafa@gmail.com" className="link-contato">
+              ✉️ cinemacomorafa@gmail.com
+            </a>
+            <a
+              href="https://letterboxd.com/bissigorafael/"
+              target="_blank"
+              rel="noreferrer"
+              className="link-letterboxd"
+            >
+              Letterboxd ↗
+            </a>
+            <a
+              href="https://instagram.com/cinemacomorafa"
+              target="_blank"
+              rel="noreferrer"
+              className="link-contato"
+            >
+              Instagram ↗
+            </a>
+            <a
+              href="https://x.com/cinemacomorafa"
+              target="_blank"
+              rel="noreferrer"
+              className="link-contato"
+            >
+              X / Twitter ↗
+            </a>
+          </div>
+        </div>
       </main>
       <Footer />
     </>
