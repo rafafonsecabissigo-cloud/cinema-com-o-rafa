@@ -1204,3 +1204,11 @@ footer {
     width: 80px;
   }
 }
+.list-section h2,
+article h2,
+.featured-content h2,
+.review-titulo,
+.list-card h3 {
+  text-transform: none !important;
+  letter-spacing: 0px !important;
+}
