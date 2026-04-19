@@ -1449,11 +1449,12 @@ footer {
 .home-review-img {
   position: relative;
   width: 100%;
-  height: 140px;
+  aspect-ratio: 2 / 3;
   background: #141420;
   overflow: hidden;
   margin-bottom: 4px;
   border: 1px solid var(--glass-border);
+}
 }
 
 .home-review-title {
