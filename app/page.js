@@ -83,7 +83,7 @@ export default function HomePage() {
                       src={normalizeImagePath(featured.posterImage)}
                       alt={featured.title}
                       fill
-                      className="object-cover"
+                      className="object-contain"
                     />
                   </div>
                   <div>
