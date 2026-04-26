@@ -28,10 +28,8 @@ export default function Footer() {
   return (
     <footer id="contato" className="footer">
 
-      {/* ── BLOCO PRINCIPAL ── */}
       <div className="footer-main">
 
-        {/* Coluna esquerda — bio */}
         <div className="footer-bio">
           <div className="footer-bio-author">
             <Image
@@ -68,10 +66,8 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Divisor vertical */}
         <div className="footer-divider-v" aria-hidden="true" />
 
-        {/* Coluna direita — formulário */}
         <div className="footer-contact">
           <p className="footer-contact-title">Fale comigo</p>
           <p className="footer-contact-helper">
@@ -83,27 +79,9 @@ export default function Footer() {
             className="footer-form"
             aria-label="Formulário de contato"
           >
-            <input
-              type="text"
-              name="nome"
-              placeholder="Seu nome"
-              className="footer-input"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Seu e-mail"
-              className="footer-input"
-              required
-            />
-            <textarea
-              name="mensagem"
-              rows={4}
-              placeholder="Escreva sua mensagem..."
-              className="footer-input footer-textarea"
-              required
-            />
+            <input type="text" name="nome" placeholder="Seu nome" className="footer-input" required />
+            <input type="email" name="email" placeholder="Seu e-mail" className="footer-input" required />
+            <textarea name="mensagem" rows="4" placeholder="Escreva sua mensagem..." className="footer-input footer-textarea" required />
 
             {status === "idle" && (
               <button type="submit" className="footer-btn">Enviar mensagem</button>
@@ -121,7 +99,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* ── RODAPÉ INFERIOR ── */}
       <div className="footer-bottom">
         <span className="footer-copy">© {new Date().getFullYear()} Cinema com o Rafa</span>
         <span className="footer-copy">João Pessoa · PB · Brasil</span>
