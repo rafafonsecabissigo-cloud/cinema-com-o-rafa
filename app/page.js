@@ -137,21 +137,40 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── NAVEGAÇÃO ── */}
-        <div className="home-nav-cards">
-          {[
-            { num: "01", title: "Críticas", desc: "Análises autorais de clássicos e contemporâneos com voz editorial própria.", link: "/criticas" },
-            { num: "02", title: "Listas", desc: "Curadorias temáticas e rankings para descoberta e aprofundamento no cinema.", link: "/listas" },
-            { num: "03", title: "Sobre", desc: "Perfil editorial, cobertura para festivais e credenciais de imprensa.", link: "/sobre" },
-          ].map((item) => (
-            <Link key={item.link} href={item.link} className="home-nav-card">
-              <span className="home-nav-card-num">{item.num}</span>
-              <h3 className="home-nav-card-title">{item.title}</h3>
-              <p className="home-nav-card-desc">{item.desc}</p>
-              <span className="home-nav-card-cta">Explorar →</span>
-            </Link>
-          ))}
-        </div>
+        {/* ── SOBRE ── */}
+        <section className="home-about">
+          <div className="home-about-left">
+            <p className="home-about-kicker">Quem escreve</p>
+            <h2 className="home-about-title">Rafael<br /><em>Bissigo</em></h2>
+            <Link href="/sobre" className="home-about-more">Ler mais →</Link>
+          </div>
+
+          <div className="home-about-body">
+            <p className="home-about-lead">
+              O cinema entrou na minha vida como uma paixão — e ficou como uma forma de enxergar o mundo.
+            </p>
+            <p className="home-about-text">
+              Cresci percebendo que cada filme carrega mensagens diretas e indiretas, e que essas mensagens têm o poder de mudar perspectivas. Quando um filme me toca, não consigo separar o que vejo na tela do que vivo fora dela. É dessa conexão que nascem as minhas críticas.
+            </p>
+            <p className="home-about-text">
+              Como jovem crítico baseado em João Pessoa, acredito que o cinema não precisa ser distante ou inacessível. Ele pode ser refúgio numa semana pesada, companhia numa tarde quieta, ou o empurrão que faltava para ver a vida com novos olhos. É essa proximidade que quero trazer para as novas gerações.
+            </p>
+            <div className="home-about-values">
+              <div className="home-about-value">
+                <span className="home-about-value-label">Conexão</span>
+                <span className="home-about-value-desc">Críticas que dialogam com a vida real</span>
+              </div>
+              <div className="home-about-value">
+                <span className="home-about-value-label">Acessibilidade</span>
+                <span className="home-about-value-desc">Cinema para todos, não só para iniciados</span>
+              </div>
+              <div className="home-about-value">
+                <span className="home-about-value-label">Amadurecimento</span>
+                <span className="home-about-value-desc">Cada filme como oportunidade de crescer</span>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* ── AUTHOR STRIP ── */}
         <div className="home-author-strip">
