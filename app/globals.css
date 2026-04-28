@@ -2163,3 +2163,133 @@ article h2 {
     text-align: center;
   }
 }
+
+/* ── SECÇÃO SOBRE (home) ── */
+.home-about {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 0;
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
+  margin: 0 0 56px;
+}
+
+.home-about-left {
+  padding: 52px 40px 52px 0;
+  border-right: 1px solid var(--glass-border);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+}
+
+.home-about-kicker {
+  font-size: 0.62rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #4a4a58;
+  font-weight: 600;
+}
+
+.home-about-title {
+  font-family: var(--font-heading), serif;
+  font-size: 2.4rem;
+  line-height: 1.05;
+  color: var(--heading-color);
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.home-about-title em {
+  color: var(--accent-color);
+  font-style: italic;
+}
+
+.home-about-more {
+  font-size: 0.66rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  text-decoration: none;
+  margin-top: 8px;
+  transition: letter-spacing 0.2s ease;
+  display: inline-block;
+}
+
+.home-about-more:hover {
+  letter-spacing: 3px;
+}
+
+/* Corpo */
+.home-about-body {
+  padding: 52px 0 52px 52px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.home-about-lead {
+  font-family: var(--font-heading), serif;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  font-style: italic;
+  color: #c0c0cc;
+  line-height: 1.6;
+  max-width: 58ch;
+}
+
+.home-about-text {
+  font-size: 0.9rem;
+  color: #6a6a78;
+  line-height: 1.85;
+  max-width: 62ch;
+}
+
+/* Valores */
+.home-about-values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--glass-border);
+  margin-top: 12px;
+}
+
+.home-about-value {
+  background: var(--bg-color);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.home-about-value-label {
+  font-family: var(--font-heading), serif;
+  font-size: 0.9rem;
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+.home-about-value-desc {
+  font-size: 0.75rem;
+  color: #4a4a58;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .home-about {
+    grid-template-columns: 1fr;
+  }
+
+  .home-about-left {
+    border-right: none;
+    border-bottom: 1px solid var(--glass-border);
+    padding: 36px 0 32px;
+  }
+
+  .home-about-body {
+    padding: 36px 0;
+  }
+
+  .home-about-values {
+    grid-template-columns: 1fr;
+  }
+}
