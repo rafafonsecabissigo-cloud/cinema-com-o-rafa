@@ -1,4 +1,4 @@
-﻿[
+[
     {
         "slug":  "buster-keaton-ranked",
         "title":  "Buster Keaton",
@@ -140,6 +140,27 @@
                           "year":  "1922",
                           "posterImage":  "https://a.ltrbxd.com/resized/film-poster/1/4/4/4/6/14446-the-frozen-north-0-125-0-187-crop.jpg?v=e645cc3380",
                           "link":  "https://boxd.it/BA0"
+                      },
+                      {
+                          "rank":  20,
+                          "title":  "Our Hospitality",
+                          "year":  "1923",
+                          "posterImage":  "https://image.tmdb.org/t/p/original/cAEdL6RzfDSbPO51izl01Njzikx.jpg",
+                          "link":  "https://boxd.it/1jY6"
+                      },
+                      {
+                          "rank":  21,
+                          "title":  "Day Dreams",
+                          "year":  "1922",
+                          "posterImage":  "https://image.tmdb.org/t/p/original/yTWwNn3TBhVK4JGIJmb32JRubXt.jpg",
+                          "link":  "https://letterboxd.com/film/day-dreams/"
+                      },
+                      {
+                          "rank":  22,
+                          "title":  "The Play House",
+                          "year":  "1921",
+                          "posterImage":  "https://image.tmdb.org/t/p/original/9Sj7Dit3I88asonYVCW6O5YUYtx.jpg",
+                          "link":  "https://letterboxd.com/film/the-play-house/"
                       }
                   ]
     },
@@ -205,7 +226,7 @@
     },
     {
         "slug":  "films-that-changed-the-perception-of-life",
-        "title":  "Films That Changed the Perception of Life",
+        "title":  "Filmes que Mudaram a Percepção da Vida",
         "cardTitle":  "Mudaram Minha Vida",
         "category":  "Impacto Pessoal",
         "quote":  "\"These are films that, when I watched them, ended up changing a bit of who I am.\"",
@@ -221,21 +242,21 @@
                       },
                       {
                           "rank":  2,
-                          "title":  "La La Land",
+                          "title":  "La La Land: Cantando Estações",
                           "year":  "2016",
                           "posterImage":  "https://image.tmdb.org/t/p/w342/5KIj6aioW1UtUT1IV0qqW5iZbNH.jpg",
                           "link":  "https://boxd.it/a5fa"
                       },
                       {
                           "rank":  3,
-                          "title":  "Before Sunrise",
+                          "title":  "Antes do Amanhecer",
                           "year":  "1995",
                           "posterImage":  "https://image.tmdb.org/t/p/w342/giaxAC74fht0LVQ4WKVoDzLM2Iy.jpg",
                           "link":  "https://boxd.it/2bcU"
                       },
                       {
                           "rank":  4,
-                          "title":  "Before Sunset",
+                          "title":  "Antes do Pôr do Sol",
                           "year":  "2004",
                           "posterImage":  "https://image.tmdb.org/t/p/w342/gqPkhjDOSaYcpRwedOtrc5JmZbp.jpg",
                           "link":  "https://boxd.it/2bcg"
@@ -263,21 +284,21 @@
                       },
                       {
                           "rank":  8,
-                          "title":  "Little Miss Sunshine",
+                          "title":  "Pequena Miss Sunshine",
                           "year":  "2006",
                           "posterImage":  "https://image.tmdb.org/t/p/w342/pUPR2pgiVfWMkHcE0SqaE4skDl9.jpg",
                           "link":  "https://boxd.it/29EW"
                       },
                       {
                           "rank":  9,
-                          "title":  "Cars",
+                          "title":  "Carros",
                           "year":  "2006",
                           "posterImage":  "https://image.tmdb.org/t/p/w342/hvHw7ASXEK8x3EawlOtwYXrovdo.jpg",
                           "link":  "https://boxd.it/29ho"
                       },
                       {
                           "rank":  10,
-                          "title":  "After Hours",
+                          "title":  "Depois de Horas",
                           "year":  "1985",
                           "posterImage":  "https://image.tmdb.org/t/p/w342/xbnXHTgyliktMV9lLF9EASaYxG.jpg",
                           "link":  "https://boxd.it/1VfS"
@@ -440,20 +461,20 @@
         "title":  "Filmes que quero ver em 2026",
         "cardTitle":  "Filmes que quero ver em 2026",
         "category":  "Temporada 2026",
-        "quote":  "\"so, I think it’s gonna be a reflexive year!\"",
+        "quote":  "\"so, I think it's gonna be a reflexive year!\"",
         "description":  "Os grandes desafios e metas que separei para assistir ao longo deste ano reflexivo.",
         "heroImage":  "https://images.unsplash.com/photo-1542204113-e9354e710444?q=80\u0026w=2070\u0026auto=format\u0026fit=crop",
         "items":  [
                       {
                           "rank":  1,
-                          "title":  "The Odyssey",
+                          "title":  "A Odisseia",
                           "year":  "2026",
                           "posterImage":  "https://image.tmdb.org/t/p/w342/lkShxOPlelgr3R7zYAcG00w6Z94.jpg",
                           "link":  "https://boxd.it/QFQU"
                       },
                       {
                           "rank":  2,
-                          "title":  "The Social Reckoning",
+                          "title":  "O Ajuste de Contas Social",
                           "year":  "2026",
                           "posterImage":  "https://image.tmdb.org/t/p/w342/99jEXpxTwjOHre03wCJVug9ju6H.jpg",
                           "link":  "https://boxd.it/MRPQ"
@@ -467,21 +488,21 @@
                       },
                       {
                           "rank":  4,
-                          "title":  "See You When I See You",
+                          "title":  "Até a Próxima",
                           "year":  "2026",
                           "posterImage":  "https://image.tmdb.org/t/p/w342/yBJlCAiq43eLlXqlMLKTIInsD2K.jpg",
                           "link":  "https://boxd.it/R7Ly"
                       },
                       {
                           "rank":  5,
-                          "title":  "Disclosure Day",
+                          "title":  "Dia da Revelação",
                           "year":  "2026",
                           "posterImage":  "https://image.tmdb.org/t/p/w342/EvoaSiQmCpuAqxb1ZGOYPzzjFe.jpg",
                           "link":  "https://boxd.it/MDJY"
                       },
                       {
                           "rank":  6,
-                          "title":  "Dune: Part Three",
+                          "title":  "Duna: Parte Três",
                           "year":  "2026",
                           "posterImage":  "https://image.tmdb.org/t/p/w342/hCamxg6L1K0rnqzCHSv3I1roXTb.jpg",
                           "link":  "https://boxd.it/ImWe"
@@ -495,28 +516,28 @@
                       },
                       {
                           "rank":  8,
-                          "title":  "Eternity",
+                          "title":  "Eternidade",
                           "year":  "2025",
                           "posterImage":  "https://image.tmdb.org/t/p/w342/o8pg20G67BGmQvRkXwstNre062J.jpg",
                           "link":  "https://boxd.it/LYtK"
                       },
                       {
                           "rank":  9,
-                          "title":  "It Was Just an Accident",
+                          "title":  "Foi Apenas um Acidente",
                           "year":  "2025",
                           "posterImage":  "https://image.tmdb.org/t/p/w342/eNYGj2DG3n8OrVPTfYunpPW9uas.jpg",
                           "link":  "https://boxd.it/TX2k"
                       },
                       {
                           "rank":  10,
-                          "title":  "The Blue Trail",
+                          "title":  "A Trilha Azul",
                           "year":  "2025",
                           "posterImage":  "https://image.tmdb.org/t/p/w342/4LV2kTS54D7v1da2ooQ8knhptLh.jpg",
                           "link":  "https://boxd.it/IrKi"
                       },
                       {
                           "rank":  11,
-                          "title":  "No Other Choice",
+                          "title":  "Sem Outra Escolha",
                           "year":  "2025",
                           "posterImage":  "https://image.tmdb.org/t/p/w342/zKtNgqdl4X79UQS1emDIdeOAaUv.jpg",
                           "link":  "https://boxd.it/nKiA"
@@ -544,49 +565,49 @@
                       },
                       {
                           "rank":  15,
-                          "title":  "The Outrun",
+                          "title":  "A Fuga",
                           "year":  "2024",
                           "posterImage":  "https://image.tmdb.org/t/p/w342/a1PVrIfWecgmzv5x799NVMssUAp.jpg",
                           "link":  "https://boxd.it/txPo"
                       },
                       {
                           "rank":  16,
-                          "title":  "The Northman",
+                          "title":  "O Homem do Norte",
                           "year":  "2022",
                           "posterImage":  "https://image.tmdb.org/t/p/w342/vJfLNvOMK1Ek7OvpKgBDSqH2kN1.jpg",
                           "link":  "https://boxd.it/nK2s"
                       },
                       {
                           "rank":  17,
-                          "title":  "The Farewell",
+                          "title":  "A Despedida",
                           "year":  "2019",
                           "posterImage":  "https://image.tmdb.org/t/p/w342/8NzeFPRCrolFXzJnVmuZ5jR6fEC.jpg",
                           "link":  "https://boxd.it/kIky"
                       },
                       {
                           "rank":  18,
-                          "title":  "Call Me by Your Name",
+                          "title":  "Me Chame pelo Seu Nome",
                           "year":  "2017",
                           "posterImage":  "https://image.tmdb.org/t/p/w342/qnf5Onsk236CdE5Lff93IX69gHf.jpg",
                           "link":  "https://boxd.it/dYmm"
                       },
                       {
                           "rank":  19,
-                          "title":  "Brokeback Mountain",
+                          "title":  "Brokeback Mountain: O Segredo de Dois Irmãos",
                           "year":  "2005",
                           "posterImage":  "https://image.tmdb.org/t/p/w342/qZ7fvWbPABjdU8JciIS9f9jCRCb.jpg",
                           "link":  "https://boxd.it/2b2q"
                       },
                       {
                           "rank":  20,
-                          "title":  "Bringing Out the Dead",
+                          "title":  "Trazendo os Mortos",
                           "year":  "1999",
                           "posterImage":  "https://image.tmdb.org/t/p/w342/7bQBJTezKYDymTUjrMkyD9ScwzV.jpg",
                           "link":  "https://boxd.it/1ZZK"
                       },
                       {
                           "rank":  21,
-                          "title":  "To Live and Die in L.A.",
+                          "title":  "Viver e Morrer em Los Angeles",
                           "year":  "1985",
                           "posterImage":  "https://image.tmdb.org/t/p/w342/2iW3pSihBIhXjnBQmUJ0mAiZbB5.jpg",
                           "link":  "https://boxd.it/1XFo"
@@ -607,14 +628,14 @@
                       },
                       {
                           "rank":  24,
-                          "title":  "A Clockwork Orange",
+                          "title":  "Laranja Mecânica",
                           "year":  "1971",
                           "posterImage":  "https://image.tmdb.org/t/p/w342/e8jIwfP8jr81UTFbh2qJVjBhIUL.jpg",
                           "link":  "https://boxd.it/2aVE"
                       },
                       {
                           "rank":  25,
-                          "title":  "Breakfast at Tiffany\u0027s",
+                          "title":  "Bonequinha de Luxo",
                           "year":  "1961",
                           "posterImage":  "https://image.tmdb.org/t/p/w342/iBdn6jkwOKnJ02W8pdljYyCkYch.jpg",
                           "link":  "https://boxd.it/2aYS"
@@ -628,21 +649,21 @@
                       },
                       {
                           "rank":  27,
-                          "title":  "Ashes and Diamonds",
+                          "title":  "Cinzas e Diamantes",
                           "year":  "1958",
                           "posterImage":  "https://image.tmdb.org/t/p/w342/SxpCaTxBrt73m04exd1sp0Phxq.jpg",
                           "link":  "https://boxd.it/23q0"
                       },
                       {
                           "rank":  28,
-                          "title":  "Strangers on a Train",
+                          "title":  "Pacto Sinistro",
                           "year":  "1951",
                           "posterImage":  "https://image.tmdb.org/t/p/w342/ihC083U7ef56Ui4x0P0dobojrZ1.jpg",
                           "link":  "https://boxd.it/29tk"
                       },
                       {
                           "rank":  29,
-                          "title":  "The Philadelphia Story",
+                          "title":  "Núpcias de Escândalo",
                           "year":  "1940",
                           "posterImage":  "https://image.tmdb.org/t/p/w342/dKUubjvxO78XDts6VP1Ggcp4R9O.jpg",
                           "link":  "https://boxd.it/29a8"
@@ -1100,7 +1121,6 @@
                           "link":  "https://letterboxd.com/film/project-hail-mary/"
                       },
                       {
-           
                           "rank": 64,
                           "title": "O Grande Lebowski",
                           "year": "1998",
@@ -1148,8 +1168,35 @@
                           "year": "1950",
                           "posterImage": "https://image.tmdb.org/t/p/original/k75gRyuapGrj30oGFs9Zx94X2XT.jpg",
                           "link": "https://letterboxd.com/film/in-a-lonely-place/"
+                      },
+                      {
+                          "rank": 71,
+                          "title": "Um Cão Andaluz",
+                          "year": "1929",
+                          "posterImage": "https://image.tmdb.org/t/p/original/3Bond31VV0nRi5o1iL3i5r2s0HG.jpg",
+                          "link": "https://letterboxd.com/film/un-chien-andalou/"
+                      },
+                      {
+                          "rank": 72,
+                          "title": "Recife Frio",
+                          "year": "2009",
+                          "posterImage": "https://image.tmdb.org/t/p/original/iRfzexogG239gKJLuHi6fRHz58s.jpg",
+                          "link": "https://letterboxd.com/film/cold-tropics/"
+                      },
+                      {
+                          "rank": 73,
+                          "title": "Zootopia",
+                          "year": "2016",
+                          "posterImage": "https://image.tmdb.org/t/p/original/ncqVGCX9P3EKQfsOXiB3XxQ0Dip.jpg",
+                          "link": "https://letterboxd.com/film/zootopia/"
+                      },
+                      {
+                          "rank": 74,
+                          "title": "The Play House",
+                          "year": "1921",
+                          "posterImage": "https://image.tmdb.org/t/p/original/9Sj7Dit3I88asonYVCW6O5YUYtx.jpg",
+                          "link": "https://letterboxd.com/film/the-play-house/"
                       }
-    
-]
+                  ]
     }
 ]
