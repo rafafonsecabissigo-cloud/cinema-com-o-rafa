@@ -137,40 +137,112 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── SOBRE ── */}
-        <section className="home-about">
-          <div className="home-about-left">
-            <p className="home-about-kicker">Quem escreve</p>
-            <h2 className="home-about-title">Rafael<br /><em>Bissigo</em></h2>
-            <Link href="/sobre" className="home-about-more">Ler mais →</Link>
-          </div>
+import Image from "next/image";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
-          <div className="home-about-body">
-            <p className="home-about-lead">
-              O cinema entrou na minha vida como uma paixão — e ficou como uma forma de enxergar o mundo.
-            </p>
-            <p className="home-about-text">
-              Cresci percebendo que cada filme carrega mensagens diretas e indiretas, e que essas mensagens têm o poder de mudar perspectivas. Quando um filme me toca, não consigo separar o que vejo na tela do que vivo fora dela. É dessa conexão que nascem as minhas críticas.
-            </p>
-            <p className="home-about-text">
-              Como jovem crítico baseado em João Pessoa, acredito que o cinema não precisa ser distante ou inacessível. Ele pode ser refúgio numa semana pesada, companhia numa tarde quieta, ou o empurrão que faltava para ver a vida com novos olhos. É essa proximidade que quero trazer para as novas gerações.
-            </p>
-            <div className="home-about-values">
-              <div className="home-about-value">
-                <span className="home-about-value-label">Conexão</span>
-                <span className="home-about-value-desc">Críticas que dialogam com a vida real</span>
+export const metadata = {
+  title: "Sobre | Cinema com o Rafa",
+  description: "Rafael Bissigo é crítico de cinema baseado em João Pessoa (PB). Conheça o autor do Cinema com o Rafa."
+};
+
+export default function SobrePage() {
+  return (
+    <>
+      <Navbar />
+      <main className="bg-[#0a0a0a] min-h-screen pt-20 pb-16 px-6 md:px-12 lg:px-24">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row">
+          
+          {/* Coluna da Esquerda: Perfil e Contatos */}
+          <aside className="w-full md:w-1/3 md:pr-12 md:border-r border-gray-800 flex flex-col mb-12 md:mb-0">
+            <span className="text-xs font-bold tracking-[0.2em] text-gray-500 uppercase mb-6">
+              Quem escreve
+            </span>
+            
+            <h1 className="text-5xl md:text-6xl leading-none mb-8">
+              <span className="block text-white font-serif font-bold">Rafael</span>
+              <span className="block text-[#eab308] font-serif italic mt-1">Bissigo</span>
+            </h1>
+
+            <Image
+              src="https://i.postimg.cc/8sQPwTcv/WhatsApp-Image-2026-03-30-at-11-03-36-(1).jpg"
+              alt="Rafael Bissigo"
+              className="w-full h-auto object-cover grayscale hover:grayscale-0 transition duration-500 mb-10 opacity-90 hover:opacity-100"
+              width={300}
+              height={400}
+              priority
+            />
+
+            <div className="flex flex-col space-y-4">
+              <h3 className="text-white font-serif text-xl border-b border-gray-800 pb-2">Contato</h3>
+              <a href="mailto:cinemacomorafa@gmail.com" className="text-gray-400 hover:text-[#eab308] transition-colors text-sm">
+                cinemacomorafa@gmail.com
+              </a>
+              <a href="https://letterboxd.com/bissigorafael/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#eab308] transition-colors text-sm">
+                Letterboxd ↗
+              </a>
+              <a href="https://instagram.com/cinemacomorafa" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#eab308] transition-colors text-sm">
+                Instagram ↗
+              </a>
+              <a href="https://x.com/cinemacomorafa" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-[#eab308] transition-colors text-sm">
+                X / Twitter ↗
+              </a>
+            </div>
+          </aside>
+
+          {/* Coluna da Direita: Textos e Valores */}
+          <section className="w-full md:w-2/3 md:pl-12 flex flex-col space-y-10 mt-4 md:mt-0">
+            
+            <h2 className="text-3xl md:text-4xl font-serif italic text-gray-200 leading-snug">
+              "A verdadeira viagem de descobrimento não consiste em procurar novas paisagens, mas em ter novos olhos."
+            </h2>
+            <span className="text-[#eab308] text-sm uppercase tracking-widest font-semibold block -mt-6">
+              — Marcel Proust
+            </span>
+
+            <div className="space-y-6 text-gray-400 leading-relaxed text-lg font-light">
+              <p>
+                O cinema entrou na minha vida como uma paixão — e ficou como uma forma de enxergar o mundo. O <strong className="text-gray-200 font-medium">Cinema com o Rafa</strong> nasceu da vontade de criar um espaço de crítica cinematográfica séria, acessível e com voz própria. Aqui não há algoritmo ditando o que assistir — apenas olhares atentos sobre filmes que merecem ser discutidos.
+              </p>
+              <p>
+                Cresci percebendo que cada filme carrega mensagens diretas e indiretas, e que essas mensagens têm o poder de mudar perspectivas. Quando um filme me toca, não consigo separar o que vejo na tela do que vivo fora dela. É dessa conexão que nascem as minhas críticas.
+              </p>
+              <p>
+                Como jovem crítico baseado em João Pessoa, acredito que o cinema não precisa ser distante ou inacessível. Ele pode ser refúgio numa semana pesada, companhia numa tarde quieta, ou o empurrão que faltava para ver a vida com novos olhos.
+              </p>
+            </div>
+
+            {/* Valores: Conexão, Acessibilidade, Amadurecimento */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 border-y border-gray-800 py-8 my-4">
+              <div className="flex flex-col">
+                <span className="text-white font-serif text-lg mb-1">Conexão</span>
+                <span className="text-[#eab308] text-sm">Críticas que dialogam com a vida real</span>
               </div>
-              <div className="home-about-value">
-                <span className="home-about-value-label">Acessibilidade</span>
-                <span className="home-about-value-desc">Cinema para todos, não só para iniciados</span>
+              <div className="flex flex-col">
+                <span className="text-white font-serif text-lg mb-1">Acessibilidade</span>
+                <span className="text-[#eab308] text-sm">Cinema para todos, não só para iniciados</span>
               </div>
-              <div className="home-about-value">
-                <span className="home-about-value-label">Amadurecimento</span>
-                <span className="home-about-value-desc">Cada filme como oportunidade de crescer</span>
+              <div className="flex flex-col">
+                <span className="text-white font-serif text-lg mb-1">Amadurecimento</span>
+                <span className="text-[#eab308] text-sm">Cada filme como oportunidade de crescer</span>
               </div>
             </div>
-          </div>
-        </section>
+
+            <div className="space-y-4">
+              <h3 className="text-2xl font-serif text-white pb-2">Cobertura e credenciais</h3>
+              <p className="text-gray-400 leading-relaxed text-lg font-light">
+                As críticas são publicadas em português e inglês, com o objetivo de alcançar públicos e festivais além das fronteiras do Brasil. Tenho interesse em cobrir festivais, cabines de imprensa e lançamentos. Para solicitações de credencial ou envio de material, fique à vontade para entrar em contato.
+              </p>
+            </div>
+
+          </section>
+
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+}
 
         {/* ── AUTHOR STRIP ── */}
         <div className="home-author-strip">
