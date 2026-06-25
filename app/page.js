@@ -103,4 +103,38 @@ export default function HomePage() {
         {/* ── ÚLTIMAS CRÍTICAS ── */}
         <section className="home-section">
           <div className="home-section-header">
-            <h2
+            <h2 className="home-section-title">Últimas Críticas</h2>
+            <Link href="/criticas" className="home-section-link">Ver todas →</Link>
+          </div>
+
+          <div className="home-recent-grid">
+            {recentes.map((review) => (
+              <Link
+                key={review.slug}
+                href={`/criticas/${review.slug}`}
+                className="home-recent-card"
+              >
+                <div className="home-recent-poster-wrap">
+                  <Image
+                    src={normalizeImagePath(review.heroImage)}
+                    alt={review.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="home-recent-body">
+                  <p className="home-recent-category">{review.category}</p>
+                  <h3 className="home-recent-title">{review.cardTitle || review.title}</h3>
+                  <p className="home-recent-desc">{review.description}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+      </main>
+
+      <Footer />
+    </>
+  );
+}
